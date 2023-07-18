@@ -48,5 +48,5 @@ export const ShirtContainer = globalTheme.styled('div',{
     [`&:hover ${Description}`]:{
         transform:'translateY(0)',
     },
-
+    
 })
