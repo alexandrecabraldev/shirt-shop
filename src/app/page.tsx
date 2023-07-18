@@ -1,6 +1,7 @@
+import { Shirt } from "./components/Shirt";
 
 export default function Home() {
   return (
-    <h1>hello world</h1>
+    <Shirt></Shirt>
   )
 }
