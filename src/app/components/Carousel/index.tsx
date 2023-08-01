@@ -7,8 +7,20 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 import styles from "./style.module.css"
+import Stripe from 'stripe';
 
-export default function Carousel() {
+export interface TypeProducts{
+
+    dataProducts:{
+        id: string,
+        name: string,
+        imageUrl: string,
+        description: string | null,
+        price: Stripe.Price,
+    }[]
+}
+
+export default function Carousel({dataProducts}:TypeProducts) {
 
     return (
 
@@ -25,21 +37,17 @@ export default function Carousel() {
             <div className="swiper-button-prev" />
             <div className="swiper-button-next" />
 
-            <SwiperSlide>
-                <Shirt/>
-            </SwiperSlide>
+            {
+                dataProducts.map((product)=>{
+                    return(
+                        <SwiperSlide key={product.id}>
+                            <Shirt product={product}/>
+                        </SwiperSlide>
+                    );
+                })
+            }
+            
 
-            <SwiperSlide>
-                <Shirt/>
-            </SwiperSlide>
-
-            <SwiperSlide>
-                <Shirt/>
-            </SwiperSlide>
-
-            <SwiperSlide>
-                <Shirt/>
-            </SwiperSlide>
         </Swiper>
 
     )
