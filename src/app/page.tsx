@@ -1,7 +1,8 @@
-import { Shirt } from "./components/Shirt";
+import Carousel from "./components/Carousel";
 
 export default function Home() {
+
   return (
-    <Shirt/>
+      <Carousel/>
   )
 }

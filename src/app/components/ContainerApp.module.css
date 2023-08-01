@@ -1,0 +1,10 @@
+.containerApp{
+    width:90rem;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    margin-left:auto;
+    gap: 2rem;
+
+}
