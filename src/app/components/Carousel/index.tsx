@@ -47,7 +47,6 @@ export default function Carousel({dataProducts}:TypeProducts) {
                 })
             }
             
-
         </Swiper>
 
     )

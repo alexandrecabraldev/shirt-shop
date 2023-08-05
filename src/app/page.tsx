@@ -19,7 +19,7 @@ export default async function Home() {
     }
   })
 
-  return (
+  return (    
       <Carousel dataProducts={filteredProducts}/>
   )
 }

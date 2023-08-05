@@ -1,6 +1,6 @@
 import styles from "./style.module.css";
 import Image from "next/image";
-import shirt1 from '../../../../public/assets/shirt1.png'
+import Link from "next/link";
 import Stripe from "stripe";
 
 export interface TypeProduct{
@@ -28,10 +28,10 @@ export function Shirt({product}:TypeProduct){
                 width={520}
                 height={480}
                 />
-            <div className={`${styles.description}`}>
+            <Link href={`/${product.id}`} className={`${styles.description}`}>
                 {product.name}
                 <span className={`${styles.spanStyle}`}>{priceFormatted}</span>
-            </div>
+            </Link>
         </div>
     );
 }
